@@ -1,0 +1,21 @@
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    font-display: swap;
+    src: url($f-url) format('woff2');
+  }
+}
+
+// PT Sans Regular
+@include font('PT Sans', normal, normal, '../fonts/pt-sans-regular.woff2');
+
+// PT Sans Bold
+@include font('PT Sans', normal, bold, '../fonts/pt-sans-bold.woff2');
+
+// PT Sans italic
+@include font('PT Sans', italic, normal, '../fonts/pt-sans-italic.woff2');
+
+// PT Sans Italic Bold
+@include font('PT Sans', italic, bold, '../fonts/pt-sans-bold-italic.woff2');
