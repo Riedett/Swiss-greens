@@ -1,0 +1,23 @@
+// Frontpage-hero
+.frontpage-hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  &__content {
+    padding: 5em;
+  }
+  &__title {
+    margin: 0 0 0.5em;
+    font-size: 5.5em;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+  &__sidebar {
+    background-color: $clr-accent;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
