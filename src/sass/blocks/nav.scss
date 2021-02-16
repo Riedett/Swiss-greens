@@ -16,6 +16,11 @@
     height: -webkit-fill-available;
   }
 
+  
+  @media (min-width: 768px) {
+    width: 50vw;
+  }
+
   &__content {
     padding: 4em 3em;
   }

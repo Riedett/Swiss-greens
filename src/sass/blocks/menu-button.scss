@@ -15,15 +15,11 @@
   background-color: transparent;
   cursor: pointer;
 
-  @media (min-width: 769px) {
-    display: none;
-  }
-
   &__icon {
     display: block;
     position: relative;
     left: 10px;
-    transition: transform $tr-duration ease-in-out;
+    transition: transform $tr-duration ease-in-out, background-color $tr-duration ease-in-out;
   }
 
   &__icon,
@@ -38,7 +34,7 @@
     .menu-button__icon,
     .menu-button__icon::before,
     .menu-button__icon::after {
-      background-color: $clr-accent;
+      // background-color: $clr-dark;
     }
   }
 
@@ -51,13 +47,13 @@
 
   &__icon::before {
     top: -6px;
-    transition: top $tr-duration ease-in-out ($tr-duration * 2);
+    transition: top $tr-duration ease-in-out ($tr-duration * 2), background-color $tr-duration ease-in-out;
   }
 
   &__icon::after {
     bottom: -6px;
     transition: bottom $tr-duration ease-in-out ($tr-duration * 2),
-      transform $tr-duration ease-in-out;
+      transform $tr-duration ease-in-out, background-color $tr-duration ease-in-out;
   }
 
   &--active {
@@ -67,19 +63,19 @@
       background-color: $clr-light;
     }
     .menu-button__icon {
-      transition: transform $tr-duration ease-in-out ($tr-duration * 2);
+      transition: transform $tr-duration ease-in-out ($tr-duration * 2), background-color $tr-duration ease-in-out;
       transform: rotate(45deg);
     }
     .menu-button__icon::before {
       top: 0;
       transition: top $tr-duration ease-in-out,
-        opacity $tr-duration ease-in-out ($tr-duration * 2);
+        opacity $tr-duration ease-in-out ($tr-duration * 2), background-color $tr-duration ease-in-out;
       opacity: 0;
     }
     .menu-button__icon::after {
       bottom: 0;
       transition: bottom $tr-duration ease-in-out,
-        transform $tr-duration ease-in-out ($tr-duration * 2);
+        transform $tr-duration ease-in-out ($tr-duration * 2), background-color $tr-duration ease-in-out;
       transform: rotate(-90deg);
     }
   }
