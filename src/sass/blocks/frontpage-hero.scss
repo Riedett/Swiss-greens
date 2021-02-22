@@ -2,7 +2,7 @@
 .frontpage-hero {
   position: relative;
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   border-top: 8em solid $clr-accent;
   @media (min-width: 768px) {
     border-top: 0;

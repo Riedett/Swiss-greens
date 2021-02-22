@@ -2,7 +2,7 @@
 .about-us {
   position: relative;
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }

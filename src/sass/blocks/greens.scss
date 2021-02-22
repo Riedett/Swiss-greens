@@ -1,0 +1,61 @@
+// Greens
+.greens {
+  padding: 5em 0;
+  &__wrapper {
+    display: grid;
+    gap: 0.5em;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  &__image {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__content {
+    display: grid;
+    align-items: center;
+  }
+  &__title {
+    margin: 0 0 0.5em;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-transform: capitalize;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 990px) {
+      font-size: 4rem;
+    }
+  }
+  &__link {
+    color: $clr-text;
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    &::before {
+      content: '\02192';
+      position: relative;
+      display: inline-block;
+      margin-right: 0.75em;
+      transition: 600ms;
+    }
+    &:hover::before{
+      transform: translate(7px);
+    }
+    @media (max-width: 767px) {
+      justify-self: end;
+    }
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 990px) {
+      font-size: 2.75rem;
+    }
+  }
+}
