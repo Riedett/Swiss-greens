@@ -68,7 +68,7 @@ exports.js = js;
 // Images
 const image = () => {
   return gulp
-    .src('src/img/**/*.{png,jpg}')
+    .src('src/img/**/*.{png,jpg,gif}')
     .pipe(newer('build/img/'))
     .pipe(gulp.dest('build/img/'))
     .pipe(browserSync.stream());
@@ -78,7 +78,7 @@ exports.image = image;
 
 const imageBuild = () => {
   return gulp
-    .src('src/img/**/*.{png,jpg}')
+    .src('src/img/**/*.{png,jpg,gif}')
     .pipe(newer('build/img/'))
     .pipe(
       imagemin(
@@ -160,7 +160,7 @@ const watch = () => {
   gulp.watch('src/*.html', gulp.series(html));
   gulp.watch('src/sass/**/*.scss', gulp.series(style));
   gulp.watch('src/js/**/*.js', gulp.series(js));
-  gulp.watch('src/img/**/*.{png,jpg}', gulp.series(image));
+  gulp.watch('src/img/**/*.{png,jpg,gif}', gulp.series(image));
   gulp.watch('src/img/**/*.svg', gulp.series(svg));
   gulp.watch('src/fonts/**/*.{woff,woff2}', gulp.series(fonts));
 };
