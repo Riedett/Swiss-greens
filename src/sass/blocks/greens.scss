@@ -23,6 +23,7 @@
     align-items: center;
   }
   &__title {
+    max-width: 750px;
     margin: 0 0 0.5em;
     font-size: 2.5rem;
     line-height: 1;
@@ -31,7 +32,7 @@
       font-size: 3rem;
     }
     @media (min-width: 990px) {
-      font-size: 4rem;
+      font-size: 4.5rem;
     }
   }
   &__link {

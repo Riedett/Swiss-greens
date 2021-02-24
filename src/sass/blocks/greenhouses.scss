@@ -1,0 +1,27 @@
+// Greenhouses
+.greenhouses {
+  padding: 5em 0;
+  background-color: #f0f2ee;
+  &__wrapper {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  &__gallery {
+    display: grid;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1em;
+    }
+  }
+  &__gallery-item {
+    height: 600px;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
